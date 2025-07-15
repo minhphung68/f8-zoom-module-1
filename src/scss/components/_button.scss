@@ -1,0 +1,84 @@
+@use "../variables";
+
+.button-primary {
+    background: variables.$Orange;
+    padding: 15px 35px;
+    color: variables.$White;
+    text-align: center;
+    font-family: Manrope;
+    font-size: 1.8rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 3rem; /* 166.667% */
+
+    &.btn-center {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    &:hover {
+        background: variables.$OrangeHover;
+    }
+}
+
+.btn-text {
+    color: variables.$Orange;
+    font-family: Manrope;
+    font-size: 1.8rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 3rem; /* 166.667% */
+    text-decoration: none;
+
+    &--disabled {
+    color: variables.$Dark;
+}
+}
+
+
+
+.btn-full-width {
+    width: 100%;
+}
+
+.button-icon {
+    background: variables.$Orange;
+    width: 48px;
+    height: 48px;
+    color: variables.$White;
+    text-align: center;
+    font-family: Manrope;
+    font-size: 1.8rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 3rem; /* 166.667% */
+
+    &:hover {
+        background: variables.$OrangeHover;
+    }
+}
+
+.button-icon2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    padding: 0;
+    background: variables.$Orange;
+    color: variables.$White;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 1.8rem; /* 166.667% */
+
+    i {
+        display: inline-block;
+        font-size: 1.6rem;
+    }
+}
+
+.btn-disabled {
+    background: variables.$Dark;
+    pointer-events: none;
+}

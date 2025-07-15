@@ -1,4 +1,5 @@
 @use "./reset";
+@use "./variables";
 
 //Layout
 @use "./layout/grid";
@@ -28,7 +29,10 @@ body {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-button, select, textarea, input {
+button,
+select,
+textarea,
+input {
     font-size: inherit;
     font-family: inherit;
 }
@@ -43,3 +47,888 @@ button {
 a {
     color: inherit;
 }
+
+// top-page
+.top-page {
+    background: variables.$Yellow-Light;
+    padding-bottom: 141px;
+
+    .hero {
+        margin-top: 112px;
+    }
+
+    .hero__left-content {
+        .subheading {
+            width: 470px;
+            color: variables.$Dark;
+            font-family: "Roboto Slab";
+            font-size: 1.8rem;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 3rem;
+            /* 166.667% */
+            margin-bottom: 12px;
+        }
+
+        .heading {
+            width: 570px;
+            color: variables.$Dark;
+            font-family: "Roboto Slab";
+            font-size: 6rem;
+            font-style: normal;
+            font-weight: 800;
+            line-height: 7rem;
+            /* 116.667% */
+            margin-bottom: 18px;
+        }
+
+        .desc {
+            width: 470px;
+            color: variables.$Dark;
+            font-family: Manrope;
+            font-size: 1.8rem;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 3rem;
+            /* 166.667% */
+            margin-bottom: 38px;
+        }
+    }
+
+    .hero__right-content {
+        position: relative;
+        width: 470px;
+        height: 476px;
+
+        &::before {
+            content: url(./img/Mask-group.png);
+            position: absolute;
+            top: 111px;
+            right: -94px;
+        }
+
+        .circle-play {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            top: -100px;
+            left: -100px;
+
+            .circle-text {
+                position: absolute;
+                width: 200px;
+                height: 200px;
+                top: 0;
+                left: 0;
+                color: variables.$Dark;
+                font-family: "Roboto Slab";
+                font-size: 1.8rem;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+            }
+
+            .play-btn {
+                position: absolute;
+                width: 100px;
+                height: 100px;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
+    }
+}
+
+// Section About Us
+.about-us {
+    background: variables.$Dark;
+    padding: 100px 0;
+
+    &__img-left {
+        position: relative;
+
+        img {
+            width: 100%;
+
+        }
+
+        &::before {
+            content: url(./img/Abstract-about-us-imgleft.png);
+            position: absolute;
+            right: -57px;
+            bottom: 110px;
+
+        }
+    }
+
+    &__content-right {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100%;
+
+        .sub-heading {
+            color: variables.$Orange;
+            font-family: "Roboto Slab";
+            font-size: 1.8rem;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 3rem;
+            /* 166.667% */
+            margin-bottom: 6px;
+        }
+
+        .heading {
+            color: variables.$White;
+            font-family: "Roboto Slab";
+            font-size: 4.2rem;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 5.2rem;
+            /* 123.81% */
+            margin-bottom: 18px;
+        }
+
+        .desc {
+            color: variables.$Grey;
+            font-family: Manrope;
+            font-size: 1.8rem;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 3rem;
+            /* 166.667% */
+            margin-bottom: 28px;
+        }
+
+        .Countdown {
+            display: flex;
+            gap: 55px;
+            margin-bottom: 38px;
+
+            .Countdown__card {
+
+                .number {
+                    color: variables.$White;
+                    text-align: center;
+                    font-family: "Roboto Slab";
+                    font-size: 2.4rem;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: 3.4rem;
+                    /* 141.667% */
+                    margin-bottom: 4px;
+                }
+
+                .content {
+                    color: variables.$Grey;
+                    font-family: Manrope;
+                    font-size: 1.8rem;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 3rem;
+                    /* 166.667% */
+                }
+            }
+        }
+
+    }
+}
+
+// Section Services
+.services {
+    background: variables.$White;
+    padding: 150px 0;
+    text-align: center;
+
+    .subheading {
+        display: block;
+        color: variables.$Grey2;
+        font-family: "Roboto Slab";
+        font-size: 1.8rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 3rem;
+        /* 166.667% */
+        margin-bottom: 6px;
+    }
+
+    .heading {
+        margin-left: auto;
+        margin-right: auto;
+        width: 469px;
+        color: variables.$Dark;
+        text-align: center;
+        font-family: "Roboto Slab";
+        font-size: 4.2rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 5.2rem;
+        /* 123.81% */
+        margin-bottom: 18px;
+    }
+
+    .desc {
+        margin-left: auto;
+        margin-right: auto;
+        width: 470px;
+        color: variables.$Grey2;
+        text-align: center;
+        font-family: Manrope;
+        font-size: 1.8rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 3rem;
+        /* 166.667% */
+        margin-bottom: 70px;
+    }
+
+    &__list-member {
+        margin-bottom: 55px;
+    }
+
+    .card-member {
+        position: relative;
+
+        img {
+            width: 100%;
+        }
+
+        &__name {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            color: variables.$Dark;
+            text-align: center;
+            font-family: Manrope;
+            font-size: 2.2rem;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 3.2rem;
+            /* 145.455% */
+            background: variables.$White;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            width: calc(100% - 40px);
+
+            &--active {
+                color: variables.$White;
+                background: variables.$Orange;
+            }
+
+        }
+    }
+
+    .button-primary {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+// Section Feature
+.features {
+    padding-bottom: 150px;
+
+    &__img-left {
+
+        position: relative;
+
+        img {
+            width: 100%;
+        }
+
+        &::before {
+            content: url(./img/abstact-features-imgleft.png);
+            position: absolute;
+            top: 191px;
+            left: -49px;
+        }
+    }
+
+    &__content-right {
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100%;
+
+        .button-primary {
+            margin-top: 10px;
+            width: 180px;
+        }
+
+        .subheading {
+            color: variables.$Grey2;
+            font-family: "Roboto Slab";
+            font-size: 1.8rem;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 3rem;
+            /* 166.667% */
+            margin-bottom: 6px;
+        }
+
+        .heading {
+            width: 469px;
+            color: variables.$Dark;
+            font-family: "Roboto Slab";
+            font-size: 4.2rem;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 5.2rem;
+            /* 123.81% */
+            margin-bottom: 18px;
+        }
+
+        .desc {
+            width: 470px;
+            color: variables.$Grey2;
+            font-family: Manrope;
+            font-size: 1.8rem;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 3rem;
+            /* 166.667% */
+            margin-bottom: 28px;
+        }
+
+        .feature {
+            list-style-type: none;
+
+            li {
+                position: relative;
+                padding-left: 32px;
+                width: 470px;
+                color: variables.$Dark;
+                font-family: Manrope;
+                font-size: 1.8rem;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 3rem;
+                /* 166.667% */
+                margin-bottom: 12px;
+
+                &::before {
+                    content: "";
+                    display: inline-block;
+                    width: 6px;
+                    height: 6px;
+                    background: variables.$Dark;
+                    border-radius: 50%;
+                    position: absolute;
+                    left: 8px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                }
+            }
+        }
+    }
+}
+
+// Section Teams
+.team {
+    background: variables.$Dark;
+    padding: 100px 0;
+
+    .subheading {
+        display: block;
+        color: variables.$Orange;
+        text-align: center;
+        font-family: "Roboto Slab";
+        font-size: 1.8rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 3rem;
+        /* 166.667% */
+        margin-bottom: 6px;
+    }
+
+    .heading {
+        margin-left: auto;
+        margin-right: auto;
+        width: 469px;
+        color: variables.$White;
+        text-align: center;
+        font-family: "Roboto Slab";
+        font-size: 4.2rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 5.2rem;
+        /* 123.81% */
+        margin-bottom: 18px;
+    }
+
+    .desc {
+        margin-left: auto;
+        margin-right: auto;
+        width: 470px;
+        color: variables.$Grey;
+        text-align: center;
+        font-family: Manrope;
+        font-size: 1.8rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 3rem;
+        /* 166.667% */
+        margin-bottom: 70px;
+    }
+
+    .team-card {
+        display: flex;
+        justify-items: center;
+        align-items: center;
+        flex-direction: column;
+
+        &:hover {
+            .button-primary {
+                display: block;
+            }
+        }
+
+        &__img {
+            position: relative;
+
+            img {
+                width: 100%;
+            }
+
+            .button-primary {
+                position: absolute;
+                bottom: 30px;
+                left: 100px;
+                right: 100px;
+                margin-left: 0;
+                margin-right: 0;
+                width: auto;
+                display: none;
+                white-space: nowrap;
+            }
+        }
+
+        &__infor {
+            margin-top: 18px;
+            .name {
+                color: variables.$White;
+                text-align: center;
+                font-family: Manrope;
+                font-size: 2.2rem;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 3.2rem; /* 145.455% */
+            }
+
+            .title {
+                color: variables.$Grey;
+                text-align: center;
+                font-family: Manrope;
+                font-size: 1.6rem;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 2.8rem; /* 175% */
+            }
+        }
+    }
+
+    .btn-center {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 55px;
+    }
+}
+
+// Section Awards
+.awards {
+    background: variables.$Yellow-Light;
+    padding: 100px 0;
+
+    .subheading {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 6px;
+        color: variables.$Dark;
+        text-align: center;
+        font-family: "Roboto Slab";
+        font-size: 1.8rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 3rem; /* 166.667% */
+    }
+
+    .heading {
+        width: 469px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 70px;
+        color: variables.$Dark;
+        text-align: center;
+        font-family: "Roboto Slab";
+        font-size: 4.2rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 5.2rem; /* 123.81% */
+    }
+
+    .awards__img {
+        img {
+            width: 100%;
+        }
+    }
+}
+
+// Section Testimonial
+.testimonial {
+    background: variables.$White;
+    padding: 150px 0;
+
+    .testimonial-infor {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        margin-bottom: 70px;
+
+        &__heading {
+            display: flex;
+            flex-direction: column;
+
+            .subheading {
+                color: variables.$Grey2;
+                font-family: "Roboto Slab";
+                font-size: 1.8rem;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 3rem; /* 166.667% */
+                margin-bottom: 6px;
+            }
+
+            .heading {
+                width: 469px;
+                color: variables.$Dark;
+                font-family: "Roboto Slab";
+                font-size: 4.2rem;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 5.2rem; /* 123.81% */
+            }
+        }
+    }
+
+    .testimonial-card {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        padding: 30px;
+        border: 1px solid variables.$Border;
+        background: variables.$White;
+
+        &:hover {
+            background: variables.$White;
+            box-shadow: 0px 20px 70px 0px rgba(14, 20, 18, 0.07);
+            border: none;
+        }
+
+        &__avatar {
+            width: 64px;
+            height: 64px;
+        }
+
+        &__desc {
+            color: variables.$Grey2;
+            font-family: Manrope;
+            font-size: 1.8rem;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 3rem; /* 166.667% */
+        }
+
+        &__sign {
+
+            .icon {
+                width: 27px;
+                height: 24px;
+                margin-bottom: 12px;
+            }
+
+            .name {
+                color: variables.$Dark;
+                font-family: Manrope;
+                font-size: 2rem;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 3rem; /* 150% */
+
+            }
+
+            .title {
+                color: variables.$Grey2;
+                font-family: Manrope;
+                font-size: 1.4rem;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 2.4rem; /* 171.429% */
+            }
+
+        }
+    }
+
+    .testimonial-dot {
+        margin-top: 55px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+// Section FAQ
+.faq {
+    padding-bottom: 120px;
+
+    &__subheading {
+        display: block;
+        color: variables.$Grey2;
+        text-align: center;
+        font-family: "Roboto Slab";
+        font-size: 1.8rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 3rem; /* 166.667% */
+        margin-bottom: 6px;
+    }
+
+    &__heading {
+        margin-left: auto;
+        margin-right: auto;
+        width: 570px;
+        color: variables.$Dark;
+        text-align: center;
+        font-family: "Roboto Slab";
+        font-size: 4.2rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 5.2rem; /* 123.81% */
+        margin-bottom: 18px;
+    }
+
+    &__tab { 
+        display: flex;
+        gap: 30px;
+        justify-content: center;
+        margin-bottom: 70px;
+
+        a {
+            color: var(--Dark, #0E1412);
+            font-family: Manrope;
+            font-size: 1.8rem;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 3rem; /* 166.667% */
+            text-decoration: none;
+
+            &.active {
+                color: variables.$Orange;
+                font-family: Manrope;
+                font-size: 1.8rem;
+                font-style: normal;
+                font-weight: 600;
+                line-height: 3rem; /* 166.667% */
+            }
+        }
+    }
+
+    &__card {
+        display: flex;
+        flex-direction: column;
+        padding: 30px;
+        background: variables.$White;
+        box-shadow: 0px 20px 70px 0px rgba(14, 20, 18, 0.07);
+        margin-bottom: 30px;
+
+        .title {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 18px;
+
+            .heading {
+                color: variables.$Dark;
+                font-family: Manrope;
+                font-size: 2.2rem;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 3,2rem; /* 145.455% */
+            }
+        }
+
+        .content {
+            color: variables.$Grey2;
+            font-family: Manrope;
+            font-size: 1.8rem;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 3rem; /* 166.667% */
+        }
+
+        &--close {
+            padding: 30px 0;
+            border-top: 1px solid variables.$Light-grey;
+
+            .title {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                .heading {
+                    color: variables.$Dark;
+                    font-family: Manrope;
+                    font-size: 2.2rem;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: 3,2rem; /* 145.455% */
+                }
+            }
+        }
+    }
+}
+
+// Section Blog
+.blog {
+    margin-bottom: 150px;
+
+    &__mb70 {
+        margin-bottom: 70px;
+    }
+
+    &__subheading {
+        color: variables.$Grey2;
+        text-align: center;
+        font-family: "Roboto Slab";
+        font-size: 1.8rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 3rem; /* 166.667% */
+        margin-bottom: 6px;
+    }
+
+    &__heading {
+        width: 470px;
+        color: variables.$Dark;
+        font-family: "Roboto Slab";
+        font-size: 4.2rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 5.2rem; /* 123.81% */
+        margin-bottom: 18px;
+    }
+
+    &__desc {
+        width: 470px;
+        color: variables.$Grey2;
+        font-family: Manrope;
+        font-size: 1.8rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 3rem; /* 166.667% */
+    }
+
+    &__card {
+        .card-blog-img {
+            margin-bottom: 20px;
+
+            img {
+                width: 100%;
+            }
+        }
+
+        .card-blog-user-infor {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 20px;
+
+            .infor {
+                .name {
+                    color: variables.$Dark;
+                    font-family: Manrope;
+                    font-size: 1.8rem;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: 3rem; /* 166.667% */
+                }
+                .title {
+                    color: variables.$Grey2;
+                    font-family: Manrope;
+                    font-size: 1.6rem;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 2.8rem; /* 175% */
+                }
+            }
+        }
+
+        .card-blog-desc {
+            width: 370px;
+            color: variables.$Dark;
+            font-family: Manrope;
+            font-size: 2.2rem;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 3.2rem; /* 145.455% */
+            margin-bottom: 12px;
+        }
+    }
+}
+
+// Section cta
+.cta {
+    background: variables.$Green;
+    padding: 100px 0;
+
+    &__subheading {
+        display: block;
+        color: variables.$White;
+        text-align: center;
+        font-family: "Roboto Slab";
+        font-size: 1.8rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 3rem; /* 166.667% */
+        margin-bottom: 6px;
+    }
+
+    &__heading {
+        margin-left: auto;
+        margin-right: auto;
+        width: 570px;
+        color: variables.$White;
+        text-align: center;
+        font-family: "Roboto Slab";
+        font-size: 4.2rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 5.2rem /* 123.81% */
+    }
+
+    &__desc {
+        margin-left: auto;
+        margin-right: auto;
+        width: 470px;
+        color: variables.$White;
+        text-align: center;
+        font-family: Manrope;
+        font-size: 1.8rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 3rem; /* 166.667% */
+        margin-bottom: 38px;
+        margin-top: 18px;
+    }
+
+
+}
+
+
+
+

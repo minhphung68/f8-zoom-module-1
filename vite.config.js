@@ -3,11 +3,11 @@ import { ViteEjsPlugin } from "vite-plugin-ejs";
 import path from "path";    
 
 export default defineConfig({
-    base: "/f8-zoom-module-1",
+    base: process.env.NODE_END === "production" ? "/f8-zoom-module-1" : "/",
     root: "src", 
     publicDir: "../public",
     build: {
-        outDir: "../disc",
+        outDir: "../dist",
         emptyOutDir: true,
         rollupOptions: {
             input: {

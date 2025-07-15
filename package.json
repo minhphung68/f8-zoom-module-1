@@ -2,7 +2,8 @@
   "scripts": {
     "dev": "vite", 
     "build": "vite build",
-    "deploy": "vite build && gh-pages -d disc"
+    "deploy": "vite build && gh-pages -d dist",
+    "start": "sass src/scss:src/assets/css -w"
   },
   "dependencies": {
     "gh-pages": "^6.3.0",
