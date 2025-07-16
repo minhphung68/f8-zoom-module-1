@@ -1,0 +1,271 @@
+@use "../mixins";
+@use "../variables";
+
+// TOP-PAGE-ABOUT
+.top-page-about {
+    background: variables.$Yellow-Light;
+    padding-bottom: 100px;
+
+    .top-page-content-about {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        .subheading {
+            width: 470px;
+            color: variables.$Dark;
+            text-align: center;
+            font-family: "Roboto Slab";
+            font-size: 1.8rem;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 3rem; /* 166.667% */
+            margin-bottom: 12px;
+        }
+
+        .heading {
+            width: 670px;
+            color: variables.$Dark;
+            text-align: center;
+            font-family: "Roboto Slab";
+            font-size: 6rem;
+            font-style: normal;
+            font-weight: 800;
+            line-height: 7rem; /* 116.667% */
+            margin-bottom: 18px;
+        }
+
+        .desc {
+            width: 670px;
+            color: variables.$Dark;
+            text-align: center;
+            font-family: Manrope;
+            font-size: 1.8rem;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 3rem; /* 166.667% */
+        }
+    }
+}
+
+// STORY
+.story {
+    display: flex;
+    align-items: center;
+    padding: 150px 0;
+
+    .story__content-left {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100%;
+
+        .subheading {
+            color: variables.$Grey2;
+            font-family: "Roboto Slab";
+            font-size: 1.8rem;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 3rem; /* 166.667% */
+            margin-bottom: 6px;
+        }
+
+        .heading {
+            width: 469px;
+            color: variables.$Dark;
+            font-family: "Roboto Slab";
+            font-size: 4.2rem;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 5.2rem; /* 123.81% */
+            margin-bottom: 18px;
+        }
+
+        .desc {
+            width: 470px;
+            color: variables.$Grey2;
+            font-family: Manrope;
+            font-size: 1.8rem;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 3rem; /* 166.667% */
+        }
+    }
+
+    .story__img-right {
+        position: relative;
+
+        &::before {
+            content: url(../img/abstract-story-imgright.png);
+            position: absolute;
+            top: 302px;
+            left: -57px;
+            width: 114px;
+            height: 158px;
+        }
+
+        img {
+            width: 100%;
+        }
+    }
+}
+
+//Gallery
+.gallery {
+    padding-bottom: 150px;
+
+   .inner {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .gallery__subheading {
+            color: variables.$Grey2;
+            text-align: center;
+            font-family: "Roboto Slab";
+            font-size: 1.8rem;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 3rem; /* 166.667% */
+            margin-bottom: 6px;
+        }
+
+        .gallery__heading {
+            width: 469px;
+            color: variables.$Dark;
+            text-align: center;
+            font-family: "Roboto Slab";
+            font-size: 4.2rem;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 5.2rem; /* 123.81% */
+            margin-bottom: 18px;
+        }
+
+        .gallery__desc {
+            width: 470px;
+            color: variables.$Grey2;
+            text-align: center;
+            font-family: Manrope;
+            font-size: 1.8rem;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 3rem; /* 166.667% */
+            margin-bottom: 70px;
+        }
+
+        .gallery__img {
+            margin-top: 55px;
+            margin-bottom: 70px;
+
+            img {
+                width: 100%;
+            }
+        }
+
+        .gallery__dot {
+            margin-bottom: 70px;
+        }
+
+        .gallery__countdown {
+            display: flex;
+            gap: 100px;
+            justify-content: center;
+            align-items: center;
+            background: variables.$Yellow;
+            width: 100%;
+            padding: 55px 0;
+
+            .infor {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+
+                &__number {
+                    color: variables.$Dark;
+                    text-align: center;
+                    font-family: "Roboto Slab";
+                    font-size: 6rem;
+                    font-style: normal;
+                    font-weight: 800;
+                    line-height: 7rem; /* 116.667% */
+                }
+
+                &__title {
+                    color: variables.$Dark;
+                    text-align: center;
+                    font-family: Manrope;
+                    font-size: 1.8rem;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 3rem; /* 166.667% */
+                }
+            }
+        }
+   }
+}
+
+//Video
+.video {
+    margin-bottom: 70px;
+    
+    .inner {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .video__subheading {
+            color: variables.$Grey2;
+            text-align: center;
+            font-family: "Roboto Slab";
+            font-size: 1.8rem;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 3rem; /* 166.667% */
+            margin-bottom: 6px;
+        }
+
+         .video__heading {
+            width: 469px;
+            color: variables.$Dark;
+            text-align: center;
+            font-family: "Roboto Slab";
+            font-size: 4.2rem;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 5.2rem; /* 123.81% */
+            margin-bottom: 18px;
+        }
+
+        .video__desc {
+            width: 470px;
+            color: variables.$Grey2;
+            text-align: center;
+            font-family: Manrope;
+            font-size: 1.8rem;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 3rem; /* 166.667% */
+            margin-bottom: 70px;
+        }
+
+        .video__img {
+            position: relative;
+
+            .btn-play {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
+
+       
+    }
+}
+
+
+
+

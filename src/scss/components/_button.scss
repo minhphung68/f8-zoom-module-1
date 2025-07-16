@@ -36,8 +36,6 @@
 }
 }
 
-
-
 .btn-full-width {
     width: 100%;
 }
@@ -81,4 +79,17 @@
 .btn-disabled {
     background: variables.$Dark;
     pointer-events: none;
+}
+
+.button-secondary {
+    background: variables.$Dark;
+    padding: 17px 30px;
+    border-radius: 31px;
+    color: variables.$White;
+    text-align: center;
+    font-family: Manrope;
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 2.8rem; /* 175% */
 }

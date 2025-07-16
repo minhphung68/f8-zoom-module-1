@@ -1303,6 +1303,411 @@ table {
   background: #586863;
 }
 
+.awards {
+  background: #F8EBC9;
+  padding: 100px 0;
+}
+.awards .subheading {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 6px;
+  color: #0E1412;
+  text-align: center;
+  font-family: "Roboto Slab";
+  font-size: 1.8rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 3rem; /* 166.667% */
+}
+.awards .heading {
+  width: 469px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 70px;
+  color: #0E1412;
+  text-align: center;
+  font-family: "Roboto Slab";
+  font-size: 4.2rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 5.2rem; /* 123.81% */
+}
+.awards .awards__img img {
+  width: 100%;
+}
+
+.cta {
+  background: #017848;
+  padding: 100px 0;
+}
+.cta__subheading {
+  display: block;
+  color: #fff;
+  text-align: center;
+  font-family: "Roboto Slab";
+  font-size: 1.8rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 3rem; /* 166.667% */
+  margin-bottom: 6px;
+}
+.cta__heading {
+  margin-left: auto;
+  margin-right: auto;
+  width: 570px;
+  color: #fff;
+  text-align: center;
+  font-family: "Roboto Slab";
+  font-size: 4.2rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 5.2rem;
+}
+.cta__desc {
+  margin-left: auto;
+  margin-right: auto;
+  width: 470px;
+  color: #fff;
+  text-align: center;
+  font-family: Manrope;
+  font-size: 1.8rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 3rem; /* 166.667% */
+  margin-bottom: 38px;
+  margin-top: 18px;
+}
+
+.team {
+  background: #0E1412;
+  padding: 100px 0;
+}
+.team .subheading {
+  display: block;
+  color: #FD6038;
+  text-align: center;
+  font-family: "Roboto Slab";
+  font-size: 1.8rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 3rem;
+  /* 166.667% */
+  margin-bottom: 6px;
+}
+.team .heading {
+  margin-left: auto;
+  margin-right: auto;
+  width: 469px;
+  color: #fff;
+  text-align: center;
+  font-family: "Roboto Slab";
+  font-size: 4.2rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 5.2rem;
+  /* 123.81% */
+  margin-bottom: 18px;
+}
+.team .desc {
+  margin-left: auto;
+  margin-right: auto;
+  width: 470px;
+  color: #BECCC7;
+  text-align: center;
+  font-family: Manrope;
+  font-size: 1.8rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 3rem;
+  /* 166.667% */
+  margin-bottom: 70px;
+}
+.team .team-card {
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  flex-direction: column;
+}
+.team .team-card:hover .button-primary {
+  display: block;
+}
+.team .team-card__img {
+  position: relative;
+}
+.team .team-card__img img {
+  width: 100%;
+}
+.team .team-card__img .button-primary {
+  position: absolute;
+  bottom: 30px;
+  left: 100px;
+  right: 100px;
+  margin-left: 0;
+  margin-right: 0;
+  width: auto;
+  display: none;
+  white-space: nowrap;
+}
+.team .team-card__infor {
+  margin-top: 18px;
+}
+.team .team-card__infor .name {
+  color: #fff;
+  text-align: center;
+  font-family: Manrope;
+  font-size: 2.2rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 3.2rem; /* 145.455% */
+}
+.team .team-card__infor .title {
+  color: #BECCC7;
+  text-align: center;
+  font-family: Manrope;
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 2.8rem; /* 175% */
+}
+.team .btn-center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 55px;
+}
+
+.top-page-about {
+  background: #F8EBC9;
+  padding-bottom: 100px;
+}
+.top-page-about .top-page-content-about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.top-page-about .top-page-content-about .subheading {
+  width: 470px;
+  color: #0E1412;
+  text-align: center;
+  font-family: "Roboto Slab";
+  font-size: 1.8rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 3rem; /* 166.667% */
+  margin-bottom: 12px;
+}
+.top-page-about .top-page-content-about .heading {
+  width: 670px;
+  color: #0E1412;
+  text-align: center;
+  font-family: "Roboto Slab";
+  font-size: 6rem;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 7rem; /* 116.667% */
+  margin-bottom: 18px;
+}
+.top-page-about .top-page-content-about .desc {
+  width: 670px;
+  color: #0E1412;
+  text-align: center;
+  font-family: Manrope;
+  font-size: 1.8rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 3rem; /* 166.667% */
+}
+
+.story {
+  display: flex;
+  align-items: center;
+  padding: 150px 0;
+}
+.story .story__content-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+.story .story__content-left .subheading {
+  color: #586863;
+  font-family: "Roboto Slab";
+  font-size: 1.8rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 3rem; /* 166.667% */
+  margin-bottom: 6px;
+}
+.story .story__content-left .heading {
+  width: 469px;
+  color: #0E1412;
+  font-family: "Roboto Slab";
+  font-size: 4.2rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 5.2rem; /* 123.81% */
+  margin-bottom: 18px;
+}
+.story .story__content-left .desc {
+  width: 470px;
+  color: #586863;
+  font-family: Manrope;
+  font-size: 1.8rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 3rem; /* 166.667% */
+}
+.story .story__img-right {
+  position: relative;
+}
+.story .story__img-right::before {
+  content: url(../img/abstract-story-imgright.png);
+  position: absolute;
+  top: 302px;
+  left: -57px;
+  width: 114px;
+  height: 158px;
+}
+.story .story__img-right img {
+  width: 100%;
+}
+
+.gallery {
+  padding-bottom: 150px;
+}
+.gallery .inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.gallery .inner .gallery__subheading {
+  color: #586863;
+  text-align: center;
+  font-family: "Roboto Slab";
+  font-size: 1.8rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 3rem; /* 166.667% */
+  margin-bottom: 6px;
+}
+.gallery .inner .gallery__heading {
+  width: 469px;
+  color: #0E1412;
+  text-align: center;
+  font-family: "Roboto Slab";
+  font-size: 4.2rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 5.2rem; /* 123.81% */
+  margin-bottom: 18px;
+}
+.gallery .inner .gallery__desc {
+  width: 470px;
+  color: #586863;
+  text-align: center;
+  font-family: Manrope;
+  font-size: 1.8rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 3rem; /* 166.667% */
+  margin-bottom: 70px;
+}
+.gallery .inner .gallery__img {
+  margin-top: 55px;
+  margin-bottom: 70px;
+}
+.gallery .inner .gallery__img img {
+  width: 100%;
+}
+.gallery .inner .gallery__dot {
+  margin-bottom: 70px;
+}
+.gallery .inner .gallery__countdown {
+  display: flex;
+  gap: 100px;
+  justify-content: center;
+  align-items: center;
+  background: #FED464;
+  width: 100%;
+  padding: 55px 0;
+}
+.gallery .inner .gallery__countdown .infor {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.gallery .inner .gallery__countdown .infor__number {
+  color: #0E1412;
+  text-align: center;
+  font-family: "Roboto Slab";
+  font-size: 6rem;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 7rem; /* 116.667% */
+}
+.gallery .inner .gallery__countdown .infor__title {
+  color: #0E1412;
+  text-align: center;
+  font-family: Manrope;
+  font-size: 1.8rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 3rem; /* 166.667% */
+}
+
+.video {
+  margin-bottom: 70px;
+}
+.video .inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.video .inner .video__subheading {
+  color: #586863;
+  text-align: center;
+  font-family: "Roboto Slab";
+  font-size: 1.8rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 3rem; /* 166.667% */
+  margin-bottom: 6px;
+}
+.video .inner .video__heading {
+  width: 469px;
+  color: #0E1412;
+  text-align: center;
+  font-family: "Roboto Slab";
+  font-size: 4.2rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 5.2rem; /* 123.81% */
+  margin-bottom: 18px;
+}
+.video .inner .video__desc {
+  width: 470px;
+  color: #586863;
+  text-align: center;
+  font-family: Manrope;
+  font-size: 1.8rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 3rem; /* 166.667% */
+  margin-bottom: 70px;
+}
+.video .inner .video__img {
+  position: relative;
+}
+.video .inner .video__img .btn-play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 .button-primary {
   background: #FD6038;
   padding: 15px 35px;
@@ -1733,138 +2138,6 @@ a {
   left: 8px;
   top: 50%;
   transform: translateY(-50%);
-}
-
-.team {
-  background: #0E1412;
-  padding: 100px 0;
-}
-.team .subheading {
-  display: block;
-  color: #FD6038;
-  text-align: center;
-  font-family: "Roboto Slab";
-  font-size: 1.8rem;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 3rem;
-  /* 166.667% */
-  margin-bottom: 6px;
-}
-.team .heading {
-  margin-left: auto;
-  margin-right: auto;
-  width: 469px;
-  color: #fff;
-  text-align: center;
-  font-family: "Roboto Slab";
-  font-size: 4.2rem;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 5.2rem;
-  /* 123.81% */
-  margin-bottom: 18px;
-}
-.team .desc {
-  margin-left: auto;
-  margin-right: auto;
-  width: 470px;
-  color: #BECCC7;
-  text-align: center;
-  font-family: Manrope;
-  font-size: 1.8rem;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 3rem;
-  /* 166.667% */
-  margin-bottom: 70px;
-}
-.team .team-card {
-  display: flex;
-  justify-items: center;
-  align-items: center;
-  flex-direction: column;
-}
-.team .team-card:hover .button-primary {
-  display: block;
-}
-.team .team-card__img {
-  position: relative;
-}
-.team .team-card__img img {
-  width: 100%;
-}
-.team .team-card__img .button-primary {
-  position: absolute;
-  bottom: 30px;
-  left: 100px;
-  right: 100px;
-  margin-left: 0;
-  margin-right: 0;
-  width: auto;
-  display: none;
-  white-space: nowrap;
-}
-.team .team-card__infor {
-  margin-top: 18px;
-}
-.team .team-card__infor .name {
-  color: #fff;
-  text-align: center;
-  font-family: Manrope;
-  font-size: 2.2rem;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 3.2rem; /* 145.455% */
-}
-.team .team-card__infor .title {
-  color: #BECCC7;
-  text-align: center;
-  font-family: Manrope;
-  font-size: 1.6rem;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 2.8rem; /* 175% */
-}
-.team .btn-center {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 55px;
-}
-
-.awards {
-  background: #F8EBC9;
-  padding: 100px 0;
-}
-.awards .subheading {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 6px;
-  color: #0E1412;
-  text-align: center;
-  font-family: "Roboto Slab";
-  font-size: 1.8rem;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 3rem; /* 166.667% */
-}
-.awards .heading {
-  width: 469px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 70px;
-  color: #0E1412;
-  text-align: center;
-  font-family: "Roboto Slab";
-  font-size: 4.2rem;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 5.2rem; /* 123.81% */
-}
-.awards .awards__img img {
-  width: 100%;
 }
 
 .testimonial {
