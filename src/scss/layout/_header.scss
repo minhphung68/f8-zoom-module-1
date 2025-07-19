@@ -1,0 +1,10 @@
+// @use "scss/mixins";
+
+
+.header {
+    height: 60px;
+
+    @include mixins.screen(lg) {
+        
+    }
+}
