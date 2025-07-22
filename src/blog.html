@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <%- include("./partials/head.ejs") %>
+        <title>Blog</title>
+    </head>
+    <body>
+        <div class="wrapper">
+            <!-- Start-top-page-blog -->
+            <div class="top-page-blog">
+                <div class="container">
+                    <!-- header -->
+                    <%- include("./partials/header.ejs") %>
+                    <!-- header -->
+                </div>
+            </div>
+            <!-- End-top-page-blog -->
+            <!-- Section-releases -->
+            <section class="releases">
+                <div class="container">
+                    <div class="row">
+                        <h1 class="releases__heading">
+                            Justice Law Firm Press Releases
+                        </h1>
+                        <div class="releases__tab">
+                            <button class="button-primary">All</button>
+                            <button class="button-primary btn-disabled">
+                                Recent
+                            </button>
+                            <button class="button-primary btn-disabled">
+                                Popular
+                            </button>
+                            <button class="button-primary btn-disabled">
+                                Trending
+                            </button>
+                            <button class="button-primary btn-disabled">
+                                Oldest
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- End-Section-releases -->
+            <!-- Section-Blog -->
+            <section class="blog">
+                <div class="container">
+                    <div
+                        class="row row-cols-3 row-cols-xl-2 g-xl-3 row-cols-lg-1"
+                    >
+                        <div class="col-4 col-xl-6">
+                            <div class="blog__card">
+                                <div class="card-blog-img">
+                                    <img src="./img/blog-img-1.png" alt="" />
+                                </div>
+                                <div class="card-blog-user-infor">
+                                    <div class="avatar">
+                                        <img
+                                            src="./img/blog-avatar.png"
+                                            alt=""
+                                        />
+                                    </div>
+                                    <div class="infor">
+                                        <span class="name">Mitchell Starc</span>
+                                        <p class="title">Attorney at Law</p>
+                                    </div>
+                                </div>
+                                <h4 class="card-blog-desc">
+                                    5 Key Rules of Law in Our Society Must Know
+                                    in 2022
+                                </h4>
+                                <a href="" class="btn-text">Learn More</a>
+                            </div>
+                        </div>
+                        <div class="col-4 col-xl-6">
+                            <div class="blog__card">
+                                <div class="card-blog-img">
+                                    <img src="./img/blog-img-2.png" alt="" />
+                                </div>
+                                <div class="card-blog-user-infor">
+                                    <div class="avatar">
+                                        <img
+                                            src="./img/blog-avatar.png"
+                                            alt=""
+                                        />
+                                    </div>
+                                    <div class="infor">
+                                        <span class="name">Mitchell Starc</span>
+                                        <p class="title">Attorney at Law</p>
+                                    </div>
+                                </div>
+                                <h4 class="card-blog-desc">
+                                    5 Key Rules of Law in Our Society Must Know
+                                    in 2022
+                                </h4>
+                                <a href="" class="btn-text btn-text--disabled">
+                                    Learn More
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-4 col-xl-6">
+                            <div class="blog__card">
+                                <div class="card-blog-img">
+                                    <img src="./img/blog-img-3.png" alt="" />
+                                </div>
+                                <div class="card-blog-user-infor">
+                                    <div class="avatar">
+                                        <img
+                                            src="./img/blog-avatar.png"
+                                            alt=""
+                                        />
+                                    </div>
+                                    <div class="infor">
+                                        <span class="name">Mitchell Starc</span>
+                                        <p class="title">Attorney at Law</p>
+                                    </div>
+                                </div>
+                                <h4 class="card-blog-desc">
+                                    5 Key Rules of Law in Our Society Must Know
+                                    in 2022
+                                </h4>
+                                <a href="" class="btn-text btn-text--disabled">
+                                    Learn More
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- End-Section-Blog -->
+            <!-- Section-Newsletter -->
+            <section class="newsletter">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-6 offset-3 col-md-12 offset-md-0">
+                            <div class="inner">
+                                <span class="newsletter__subheading">
+                                    #Newsletter
+                                </span>
+                                <h2 class="newsletter__heading">
+                                    Subscribe Our Newsletter
+                                </h2>
+                                <div class="newsletter__input-btn">
+                                    <input
+                                        type="text"
+                                        name=""
+                                        id=""
+                                        placeholder="Enter your email"
+                                    />
+                                    <button class="button-primary">
+                                        Subscribe
+                                    </button>
+                                </div>
+                                <div class="newsletter__note">
+                                    <p class="text">
+                                        The latest Law News.
+                                        <a class="link" href="#!">
+                                            Stright to your inbox
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- End-Newsletter -->
+            <!-- Section-Blog -->
+            <section class="blog">
+                <div class="container">
+                    <div
+                        class="row row-cols-3 g-3 row-cols-xl-2 g-xl-3 row-cols-lg-1 g-lg-3"
+                    >
+                        <div class="col-4 col-xl-6">
+                            <div class="blog__card">
+                                <div class="card-blog-img">
+                                    <img src="./img/Releases-img1.png" alt="" />
+                                </div>
+                                <div class="card-blog-user-infor">
+                                    <div class="avatar">
+                                        <img
+                                            src="./img/blog-avatar.png"
+                                            alt=""
+                                        />
+                                    </div>
+                                    <div class="infor">
+                                        <span class="name">Mitchell Starc</span>
+                                        <p class="title">Attorney at Law</p>
+                                    </div>
+                                </div>
+                                <h4 class="card-blog-desc">
+                                    5 Key Rules of Law in Our Society Must Know
+                                    in 2022
+                                </h4>
+                                <a href="" class="btn-text">Learn More</a>
+                            </div>
+                        </div>
+                        <div class="col-4 col-xl-6">
+                            <div class="blog__card">
+                                <div class="card-blog-img">
+                                    <img src="./img/Releases-img2.png" alt="" />
+                                </div>
+                                <div class="card-blog-user-infor">
+                                    <div class="avatar">
+                                        <img
+                                            src="./img/blog-avatar.png"
+                                            alt=""
+                                        />
+                                    </div>
+                                    <div class="infor">
+                                        <span class="name">Mitchell Starc</span>
+                                        <p class="title">Attorney at Law</p>
+                                    </div>
+                                </div>
+                                <h4 class="card-blog-desc">
+                                    5 Key Rules of Law in Our Society Must Know
+                                    in 2022
+                                </h4>
+                                <a href="" class="btn-text btn-text--disabled">
+                                    Learn More
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-4 col-xl-6">
+                            <div class="blog__card">
+                                <div class="card-blog-img">
+                                    <img src="./img/Releases-img3.png" alt="" />
+                                </div>
+                                <div class="card-blog-user-infor">
+                                    <div class="avatar">
+                                        <img
+                                            src="./img/blog-avatar.png"
+                                            alt=""
+                                        />
+                                    </div>
+                                    <div class="infor">
+                                        <span class="name">Mitchell Starc</span>
+                                        <p class="title">Attorney at Law</p>
+                                    </div>
+                                </div>
+                                <h4 class="card-blog-desc">
+                                    5 Key Rules of Law in Our Society Must Know
+                                    in 2022
+                                </h4>
+                                <a href="" class="btn-text btn-text--disabled">
+                                    Learn More
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-4 col-xl-6">
+                            <div class="blog__card">
+                                <div class="card-blog-img">
+                                    <img src="./img/Releases-img4.png" alt="" />
+                                </div>
+                                <div class="card-blog-user-infor">
+                                    <div class="avatar">
+                                        <img
+                                            src="./img/blog-avatar.png"
+                                            alt=""
+                                        />
+                                    </div>
+                                    <div class="infor">
+                                        <span class="name">Mitchell Starc</span>
+                                        <p class="title">Attorney at Law</p>
+                                    </div>
+                                </div>
+                                <h4 class="card-blog-desc">
+                                    5 Key Rules of Law in Our Society Must Know
+                                    in 2022
+                                </h4>
+                                <a href="" class="btn-text btn-text--disabled">
+                                    Learn More
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-4 col-xl-6">
+                            <div class="blog__card">
+                                <div class="card-blog-img">
+                                    <img src="./img/Releases-img5.png" alt="" />
+                                </div>
+                                <div class="card-blog-user-infor">
+                                    <div class="avatar">
+                                        <img
+                                            src="./img/blog-avatar.png"
+                                            alt=""
+                                        />
+                                    </div>
+                                    <div class="infor">
+                                        <span class="name">Mitchell Starc</span>
+                                        <p class="title">Attorney at Law</p>
+                                    </div>
+                                </div>
+                                <h4 class="card-blog-desc">
+                                    5 Key Rules of Law in Our Society Must Know
+                                    in 2022
+                                </h4>
+                                <a href="" class="btn-text btn-text--disabled">
+                                    Learn More
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-4 col-xl-6">
+                            <div class="blog__card">
+                                <div class="card-blog-img">
+                                    <img src="./img/Releases-img6.png" alt="" />
+                                </div>
+                                <div class="card-blog-user-infor">
+                                    <div class="avatar">
+                                        <img
+                                            src="./img/blog-avatar.png"
+                                            alt=""
+                                        />
+                                    </div>
+                                    <div class="infor">
+                                        <span class="name">Mitchell Starc</span>
+                                        <p class="title">Attorney at Law</p>
+                                    </div>
+                                </div>
+                                <h4 class="card-blog-desc">
+                                    5 Key Rules of Law in Our Society Must Know
+                                    in 2022
+                                </h4>
+                                <a href="" class="btn-text btn-text--disabled">
+                                    Learn More
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-4 col-xl-6">
+                            <div class="blog__card">
+                                <div class="card-blog-img">
+                                    <img src="./img/Releases-img7.png" alt="" />
+                                </div>
+                                <div class="card-blog-user-infor">
+                                    <div class="avatar">
+                                        <img
+                                            src="./img/blog-avatar.png"
+                                            alt=""
+                                        />
+                                    </div>
+                                    <div class="infor">
+                                        <span class="name">Mitchell Starc</span>
+                                        <p class="title">Attorney at Law</p>
+                                    </div>
+                                </div>
+                                <h4 class="card-blog-desc">
+                                    5 Key Rules of Law in Our Society Must Know
+                                    in 2022
+                                </h4>
+                                <a href="" class="btn-text btn-text--disabled">
+                                    Learn More
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-4 col-xl-6">
+                            <div class="blog__card">
+                                <div class="card-blog-img">
+                                    <img src="./img/Releases-img8.png" alt="" />
+                                </div>
+                                <div class="card-blog-user-infor">
+                                    <div class="avatar">
+                                        <img
+                                            src="./img/blog-avatar.png"
+                                            alt=""
+                                        />
+                                    </div>
+                                    <div class="infor">
+                                        <span class="name">Mitchell Starc</span>
+                                        <p class="title">Attorney at Law</p>
+                                    </div>
+                                </div>
+                                <h4 class="card-blog-desc">
+                                    5 Key Rules of Law in Our Society Must Know
+                                    in 2022
+                                </h4>
+                                <a href="" class="btn-text btn-text--disabled">
+                                    Learn More
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-4 col-xl-6">
+                            <div class="blog__card">
+                                <div class="card-blog-img">
+                                    <img src="./img/Releases-img9.png" alt="" />
+                                </div>
+                                <div class="card-blog-user-infor">
+                                    <div class="avatar">
+                                        <img
+                                            src="./img/blog-avatar.png"
+                                            alt=""
+                                        />
+                                    </div>
+                                    <div class="infor">
+                                        <span class="name">Mitchell Starc</span>
+                                        <p class="title">Attorney at Law</p>
+                                    </div>
+                                </div>
+                                <h4 class="card-blog-desc">
+                                    5 Key Rules of Law in Our Society Must Know
+                                    in 2022
+                                </h4>
+                                <a href="" class="btn-text btn-text--disabled">
+                                    Learn More
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="blog__pagination">
+                        <button class="button-text-3 button-text-3--active">
+                            1
+                        </button>
+                        <button class="button-text-3">2</button>
+                        <button class="button-text-3">3</button>
+                        <button class="button-text-3">4</button>
+                        <button class="button-text-3">5</button>
+                    </div>
+                </div>
+            </section>
+            <!-- End-Section-Blog -->
+            <!-- Footer -->
+            <%- include("./partials/footer.ejs") %>
+            <!-- End-Footer -->
+        </div>
+        <script type="module" src="./main.js"></script>
+    </body>
+</html>

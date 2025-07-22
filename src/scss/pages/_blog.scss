@@ -1,0 +1,190 @@
+@use "../variables";
+@use "../mixins";
+
+
+.top-page-blog {
+    background: variables.$Yellow-Light;
+    margin-bottom: 70px;
+}
+
+// section-releases 
+.releases {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 70px;
+
+    &__heading {
+        max-width: 570px;
+        color: variables.$Dark;
+        font-family: "Roboto Slab";
+        font-size: 6rem;
+        font-style: normal;
+        font-weight: 800;
+        line-height: 7rem; /* 116.667% */
+        margin-bottom: 38px;
+    }
+
+    &__tab {
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+
+    @include mixins.screen(md) {
+        &__heading {
+            width: 335px;
+            font-size: 3.5rem;
+            line-height: 4.1rem;
+            margin-bottom: 30px;
+        }
+
+        &__tab {
+            .button-primary {
+                padding: 12px 29px;
+                font-size: 1.5rem;
+                line-height: 2.5rem
+            }
+        }
+    }
+}
+
+//Section-Blog
+.blog {
+    @include mixins.screen(lg) {
+        margin-bottom: 50px;
+
+        &__card {
+            .card-blog-desc {
+                max-width: 100% !important;
+            }
+        }
+    }
+}
+
+// Section-Newsletter
+.newsletter {
+    background: variables.$Green;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    margin-top: -50px;
+    margin-bottom: 100px;
+
+    .inner {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+       .newsletter__subheading {
+            color: variables.$White;
+            text-align: center;
+            font-family: "Roboto Slab";
+            font-size: 1.8rem;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 3rem; /* 166.667% */
+            margin-bottom: 6px;
+       }
+
+        .newsletter__heading {
+            width: 570px;
+            color: variables.$White;
+            text-align: center;
+            font-family: "Roboto Slab";
+            font-size: 4.2rem;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 5.2rem; /* 123.81% */
+            margin-bottom: 38px;
+        }
+
+        .newsletter__input-btn {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 18px;
+
+            input {
+                width: 393px;
+                height: 60px;
+                padding-left: 16px;
+            }
+        }
+
+        .newsletter__note {
+            width: 470px;
+
+            .text {
+                color: variables.$White;
+                text-align: center;
+                font-family: Manrope;
+                font-size: 1.8rem;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 3rem; /* 166.667% */
+
+                .link {
+                    text-decoration: none;
+                    color: variables.$Yellow;
+                }
+            }
+        }
+    }
+
+    @include mixins.screen(lg) {
+        margin-top: 0px !important;
+    }
+
+     @include mixins.screen(md) {
+        padding-top: 40px !important;
+        padding-bottom: 40px !important;
+
+        &__subheading {
+            font-size: 1rem !important;
+            line-height: 1.7rem !important;
+        }
+
+        &__heading {
+            width: 335px !important;
+            font-size: 2.4rem !important;
+            line-height: 3rem !important;
+            margin-bottom: 12px !important;
+        }
+
+        &__input-btn {
+            flex-direction: column;
+
+            input {
+                width: 100% !important;
+            }
+
+            button {
+                width: 100% !important;
+            }
+        }
+
+        &__note {
+            width: 100% !important; 
+
+            .text {
+                font-size: 1rem !important;
+                line-height: 1.7rem !important;
+            }
+
+            .link {
+                font-size: 1rem !important;
+                line-height: 1.7rem !important;
+            }
+        }
+
+     }
+}
+
+// blog__pagination
+.blog__pagination {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 55px;
+    margin-bottom: 150px;
+}

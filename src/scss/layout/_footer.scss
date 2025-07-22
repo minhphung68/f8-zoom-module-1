@@ -1,0 +1,182 @@
+@use "/scss/mixins";
+@use "/scss/variables";
+
+
+.footer {
+    // display: flex;
+    // justify-content: center;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    background: variables.$Dark;
+    padding-top: 100px;
+    padding-bottom: 28px;
+
+    @include mixins.screen(xl) {
+        padding-bottom: 30px;
+        padding-top: 30px;
+    }
+
+    h6 {
+        color: variables.$White;
+        font-family: Manrope;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 30px; /* 150% */
+        margin-bottom: 24px;
+    }
+
+    .footer__links {
+        li {
+            margin-bottom: 16px;
+        }
+
+        a {
+            text-decoration: none;
+            color: variables.$Grey;
+            font-family: Manrope;
+            font-size: 1.6rem;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 2.8rem; /* 175% */
+
+            &:hover {
+                color: variables.$Orange;
+            }
+        }
+    }
+
+    .footer__infor {
+        span {
+            display: inline-block;
+            max-width: 237px;
+            color: variables.$Grey;
+            font-family: Manrope;
+            font-size: 1.6rem;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 2.8rem; /* 175% */
+        }
+
+        a {
+            text-decoration: none;
+            color: variables.$Grey;
+            font-family: Manrope;
+            font-size: 1.6rem;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 2.8rem; /* 175% */
+        }
+
+        @include mixins.screen(xl) {
+            margin-bottom: 20px;
+        }
+    }
+
+    .footer__map {
+        
+    }
+
+    .line {
+        border-bottom: 1px solid variables.$Line;
+        height: 0;
+        background: none;
+        margin-top: 55px;
+        margin-bottom: 28px;
+
+    @include mixins.screen(xl) {
+       margin-top: 20px;
+       margin-bottom: 20px;
+    }
+
+    }
+
+    .sub-footer {
+        .logo {
+            display: inline-flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            margin-bottom: 12px;
+
+        @include mixins.screen(xl) {
+            margin-bottom: 20px;
+        }
+
+            img {
+                filter: brightness(0) invert(1);
+            }
+
+            .logo__content {
+                text-align: center;
+
+                span {
+                    color: variables.$White;
+                    text-align: center;
+                    font-family: "Roboto Slab";
+                    font-size: 2.4rem;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: 1.4rem; /* 58.333% */
+                }
+
+                p {
+                    color: variables.$White;
+                    font-family: "Roboto Slab";
+                    font-size: 1.4rem;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 1.4rem;
+                }
+            }
+        }
+        .sub-footer__infor {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+        @include mixins.screen(xl) {
+            padding-bottom: 0px;
+            padding-top: 0px;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 20px;
+        }
+            span {
+                color: variables.$Grey;
+                font-family: Manrope;
+                font-size: 1.4rem;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 2.4rem; /* 171.429% */
+            }
+
+            .sub-footer__socials {
+                display: flex;
+                gap: 16px;
+
+                a {
+
+                    text-decoration: none;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 36px;
+                    height: 36px;
+                    color: variables.$White;
+                    background: variables.$Grey2;
+
+                    &:hover {
+                        background: variables.$Orange;
+                    }
+                }
+                
+            }
+        }
+    }
+
+    @include mixins.screen(xl) {
+        
+    }
+}

@@ -1,0 +1,140 @@
+@use "../variables";
+@use "../mixins";
+
+.button-primary {
+    background: variables.$Orange;
+    padding: 15px 35px;
+    color: variables.$White;
+    text-align: center;
+    font-family: Manrope;
+    font-size: 1.8rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 3rem; /* 166.667% */
+    text-decoration: none;
+    display: inline-block;
+
+    &:hover {
+        background: variables.$OrangeHover;
+    }
+
+    &.btn-disabled {
+        background: variables.$Dark;
+
+        &:hover {
+            background: variables.$OrangeHover;
+        }
+
+    }
+
+    @include mixins.screen(md) {
+        font-size: 1.2rem;
+        line-height: 2.1rem;
+        padding: 10px 24px;
+    }
+}
+
+.btn-center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 55px;
+}
+
+.btn-center2 {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 55px;
+}
+
+.button-icon {
+    background: variables.$Orange;
+    width: 48px;
+    height: 48px;
+    color: variables.$White;
+    text-align: center;
+    font-family: Manrope;
+    font-size: 1.8rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 3rem; /* 166.667% */
+
+    &:hover {
+        background: variables.$OrangeHover;
+    }
+
+    &:disabled {
+        background: variables.$Dark;
+        pointer-events: none;
+    }
+}
+
+.button-icon2 {
+    background: variables.$Orange;
+    width: 28px;
+    height: 28px;
+    color: variables.$White;
+    text-align: center;
+    font-family: Manrope;
+    font-size: 1.2rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 2.8rem; /* 166.667% */
+
+    &--close {
+        background: variables.$Dark;
+    }
+}
+
+.btn-text {
+    color: variables.$Dark;
+    font-family: Manrope;
+    font-size: 1.8rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 3rem; /* 166.667% */
+    text-decoration: none;
+
+    &:hover {
+    color: variables.$Orange;
+    }
+}
+
+.button-text-3 {
+    background: variables.$Dark;
+    width: 48px;
+    height: 48px;
+    color: variables.$White;
+    text-align: center;
+    font-family: Manrope;
+    font-size: 1.8rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 3rem; /* 166.667% */
+
+    &--active {
+        background: variables.$Orange;
+    }
+
+    &:hover {
+        background: variables.$OrangeHover;
+    }
+}
+
+.button-secondary {
+    background: variables.$Dark;
+    padding: 17px 30px;
+    border-radius: 31px;
+    color: variables.$White;
+    text-align: center;
+    font-family: Manrope;
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 2.8rem; /* 175% */
+
+    &:hover {
+        background: variables.$Orange;
+    }
+}

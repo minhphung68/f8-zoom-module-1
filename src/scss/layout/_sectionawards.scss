@@ -1,0 +1,58 @@
+@use "/scss/mixins";
+@use "/scss/variables";
+
+
+// Section Awards
+.awards {
+    background: variables.$Yellow-Light;
+    padding: 100px 0;
+
+    .subheading {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 6px;
+        color: variables.$Dark;
+        text-align: center;
+        font-family: "Roboto Slab";
+        font-size: 1.8rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 3rem; /* 166.667% */
+    }
+
+    .heading {
+        max-width: 469px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 70px;
+        color: variables.$Dark;
+        text-align: center;
+        font-family: "Roboto Slab";
+        font-size: 4.2rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 5.2rem; /* 123.81% */
+    }
+
+    .awards__img {
+        img {
+            width: 100%;
+        }
+    }
+
+    @include mixins.screen(md) {
+        padding: 50px 0;
+
+        .subheading {
+            font-size: 1.2rem;
+            line-height: 2.1rem;
+        }
+
+        .heading {
+            font-size: 3rem;
+            line-height: 3.7rem;
+            margin-bottom: 40px;
+        }
+    }
+}

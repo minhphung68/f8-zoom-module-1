@@ -1,0 +1,126 @@
+@use "/scss/mixins";
+@use "/scss/variables";
+
+// Section Services
+.services {
+    background: variables.$White;
+    padding: 150px 0;
+    text-align: center;
+
+    .subheading {
+        display: block;
+        color: variables.$Grey2;
+        font-family: "Roboto Slab";
+        font-size: 1.8rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 3rem;
+        /* 166.667% */
+        margin-bottom: 6px;
+    }
+
+    .heading {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 469px;
+        color: variables.$Dark;
+        text-align: center;
+        font-family: "Roboto Slab";
+        font-size: 4.2rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 5.2rem;
+        /* 123.81% */
+        margin-bottom: 18px;
+    }
+
+    .desc {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 470px;
+        color: variables.$Grey2;
+        text-align: center;
+        font-family: Manrope;
+        font-size: 1.8rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 3rem;
+        /* 166.667% */
+        margin-bottom: 70px;
+    }
+
+    &__list-member {
+        margin-bottom: 55px;
+    }
+
+    .card-member {
+        position: relative;
+
+        img {
+            width: 100%;
+        }
+
+        &__name {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            color: variables.$Dark;
+            text-align: center;
+            font-family: Manrope;
+            font-size: 2.2rem;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 3.2rem;
+            /* 145.455% */
+            background: variables.$White;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            width: calc(100% - 40px);
+
+            &:hover {
+                color: variables.$White;
+                background: variables.$Orange;
+            }
+
+        }
+    }
+
+    .button-primary {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+@include mixins.screen(md) {
+    padding: 50px 0 !important;
+
+    .subheading {
+        font-size: 1.2rem !important;
+        line-height: 2.1rem !important;
+    }
+
+    .heading {
+        font-size: 3.1rem !important;
+        line-height: 3.7rem !important;
+        margin-bottom: 10px !important;
+    }
+
+    .desc {
+        font-size: 1.2rem !important;
+        line-height: 2.1rem !important;
+        margin-bottom: 40px !important;
+    }
+
+    &__list-member {
+        margin-bottom: 40px !important;
+    }
+
+    .card-member {
+        &__name {
+            font-size: 1.9rem !important;
+            line-height: 2.8rem !important;
+        }
+    }
+
+}
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Practice</title>
+        <%- include("./partials/head.ejs") %>
+    </head>
+    <body>
+        <div class="wrapper">
+            <!-- Top-page -->
+            <div class="top-page-practice">
+                <div class="container">
+                    <div class="inner">
+                        <%- include("./partials/header.ejs") %>
+                    </div>
+                    <!-- Start-hero -->
+                    <div class="row">
+                        <div class="col">
+                            <div class="top-page-content-practice">
+                                <span class="subheading">
+                                    #Practice Areas
+                                </span>
+                                <h1 class="heading">
+                                    Our Practice Areas to Serve You
+                                </h1>
+                                <p class="desc">
+                                    Where every injury is personal. We are a
+                                    different kind of law firm. Let our small,
+                                    passionate group of trial lawyers fight for
+                                    your rights!
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End-hero -->
+                </div>
+            </div>
+            <!-- Section-services -->
+            <%- include("./partials/sectionservices.ejs") %>
+            <!-- End-Section-services -->
+            <!-- Section-cta -->
+            <%- include("./partials/sectioncta.ejs") %>
+            <!-- End-Section-cta -->
+            <!-- Section-footer -->
+            <%- include("./partials/footer.ejs") %>
+            <!-- End-Section-footer -->
+        </div>
+        <script type="module" src="./main.js"></script>
+    </body>
+</html>

@@ -1,10 +1,258 @@
 @use "/scss/mixins";
-
+@use "/scss/variables";
 
 .header {
-    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    padding: 30px 0;
+    background: variables.$Yellow-Light;
+    position: relative;
+    z-index: 1;
 
-    @include mixins.screen(xl) {
-        background: green;
+    .menu-hamburger {
+        display: none;
     }
+
+    .logo {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .logo__content {
+            text-align: center;
+
+             span {
+                color: variables.$Dark;
+                font-family: "Roboto Slab";
+                font-size: 2.4rem;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 1.4rem; // 58.333%
+                text-align: center;
+            }
+
+            p {
+                color: variables.$Dark;
+                font-family: "Roboto Slab";
+                font-size: 1.4rem;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 1.4rem;
+            }
+        }
+    }
+
+    .nav {
+        display: flex;
+        gap: 40px;
+
+        //Menu cấp 1
+        > li {
+            position: relative;
+            &:hover {
+                
+                > label {
+                cursor: pointer;
+                
+                    > span {
+                        color: variables.$Orange;
+                    }
+
+                    > i {
+                        color: variables.$Orange;
+                    }
+                }
+            }
+
+            > label {
+                > span {
+                    color: variables.$Dark;
+                    font-family: Manrope;
+                    font-size: 1.6rem;
+                    font-weight: 400;
+                    line-height: 2.8rem;
+                }
+
+                > i {
+                    font-size: 1.2rem;
+                    color: variables.$Dark;
+                    transition: transform 0.3s ease;
+                }
+            }
+
+            :is(#checked1,#checked2,#checked3,#checked4,#checked5):checked {
+                ~ .submenu {
+                    // display: block;
+                    max-height: 1000px;
+                    opacity: 1;
+                    visibility: visible;
+                    pointer-events: auto; 
+                    
+                }
+
+                ~ label {
+                    span {
+                        color: variables.$Orange;
+                    }
+                    i {
+                        color: variables.$Orange;
+                        transform: rotate(180deg);
+                    }
+                }
+            }
+
+            .submenu {
+                // display:none
+                opacity: 0;
+                max-height: 0;
+                visibility: hidden;
+                pointer-events: none;
+                transition:
+                opacity 0.3s linear, visibility 0.3s linear,
+                max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+                overflow: hidden;
+                position: absolute;
+                top: 125%;
+                left: 0;
+                min-width: 185px;
+                background: variables.$White;
+                box-shadow: 0px 13px 25px -12px rgba(0, 0, 0, 0.25);
+                padding: 12px 12px 0px 12px;
+
+                > li {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    margin-bottom: 12px;
+
+                    &:hover {
+                        > a {
+                            color:variables.$Orange;
+                        }
+
+                         > i {
+                            color:variables.$Orange;
+                        }
+                    }
+
+                    > a {
+                        line-height: 28px;
+                        height: 28px;
+                        padding: 0 12px;
+                        text-decoration: none;
+                        color:variables.$Grey2;
+                        text-transform: capitalize;
+                    }
+
+                    > i {
+                        font-size: 1.2rem;
+                        color: variables.$Dark;
+                    }
+                }
+            }
+        }
+    }
+
+    .phone-number {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+
+        &__text {
+            color: variables.$Dark;
+            text-align: center;
+            font-family: Manrope;
+            font-size: 1.6rem;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 2.8rem; /* 175% */
+        }
+
+    &__number {
+            text-decoration: none;
+            color: variables.$Dark;
+            text-align: center;
+            font-family: Manrope;
+            font-size: 2.2rem;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 3.2rem; /* 145.455% */
+        }
+    }
+
+      @include mixins.screen(xl) {
+
+        #toggle:checked {
+            ~ .nav {
+                max-height: 1000px;
+                opacity: 1;
+                visibility: visible;
+                pointer-events: auto; 
+            }
+        }
+
+        .logo {
+            display: none;
+        }
+
+        .menu-hamburger {
+            display: block;
+            position: relative;
+            width: 48px;
+            height: 48px;
+            text-align: center;
+            line-height: 48px;
+            font-size: 2.4rem;
+            color: variables.$Dark;
+        }
+
+        .nav {
+            opacity: 0;
+            max-height: 0;
+            visibility: hidden;
+            pointer-events: none;
+            position: absolute;
+            top: 92px;
+            left: 0;
+            right: 0;
+            background: variables.$White;
+            border: 1px solid variables.$Border;
+            display: flex;
+            flex-direction: column;
+            padding: 30px;
+            transition:
+            opacity 0.3s linear, visibility 0.3s linear,
+            max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            overflow: hidden;
+
+            > li {
+                .submenu {
+                    position: static;
+                    width: 100%;
+                }
+            }
+
+            label {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+        }     
+    }
+
+    @include mixins.screen(md) {
+        .phone-number {
+            .phone-number__text {
+                font-size: 1rem;
+            }
+
+            .phone-number__number {
+                font-size: 1.2rem;
+            }
+        }
+    }
+
 }

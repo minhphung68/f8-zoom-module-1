@@ -8,11 +8,192 @@
     </head>
     <body>
         <div class="wrapper">
-            <%- include("./partials/header.ejs") %>
-            <main>
-                <h1>About</h1>
-            </main>
+            <!-- Top-page-about -->
+            <div class="top-page-about">
+                <div class="container">
+                    <div class="inner">
+                        <%- include("./partials/header.ejs") %>
+                    </div>
+                    <!-- Start-hero -->
+                    <div class="row">
+                        <div class="col">
+                            <div class="top-page-content-about">
+                                <span class="subheading">
+                                    1 Law Firm in New York
+                                </span>
+                                <h1 class="heading">
+                                    Where The Experience To Guide You
+                                </h1>
+                                <p class="desc">
+                                    A law firm with deep expertise in New Jersey
+                                    residential & investment property
+                                    transactions and many other things.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End-hero -->
+                </div>
+            </div>
+            <!-- Section-Story -->
+            <section class="story">
+                <div class="container">
+                    <div class="row row-cols-2 row-cols-xl-1">
+                        <div class="col-5 col-xl-12">
+                            <div class="story__content-left">
+                                <span class="subheading">#Story</span>
+                                <h2 class="heading">
+                                    Through And Complete Attention to Law
+                                </h2>
+                                <p class="desc">
+                                    Your initial meeting with Parmele Law Firm
+                                    sets in motion the difficult – and tedious –
+                                    process of getting your benefits for you.
+                                    <br />
+                                    While Mr. Parmele, his paralegals, and
+                                    clerks are busy assisting you with your
+                                    forms, helping you assemble your
+                                    documentation, and keeping you updated
+                                    regularly, Mr. Parmele is busy behind the
+                                    scenes, focusing on winning your case.
+                                    <br />
+                                    How your case ends up may well be up to you.
+                                </p>
+                            </div>
+                        </div>
+                        <div
+                            class="col-6 offset-1 col-xl-12 offset-xl-0 g-xl-3 col-md-11 offset-md-1"
+                        >
+                            <div class="story__img-right">
+                                <img src="./img/Story-img-right.png" alt="" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- End-Section-Story -->
+            <!-- Section-Gallery -->
+            <section class="gallery">
+                <div class="container">
+                    <div class="row">
+                        <div class="inner">
+                            <span class="gallery__subheading"> #Gallery </span>
+                            <h2 class="gallery__heading">Justice Law Firm</h2>
+                            <p class="gallery__desc">
+                                Our Law Office provides a professional
+                                experience for all our clients, helping them
+                                navigate their legal rights.
+                            </p>
+                            <div class="gallery__img">
+                                <img src="../img/gallery-img.png" alt="" />
+                            </div>
+                            <div class="gallery__dot">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="54"
+                                    height="6"
+                                    viewBox="0 0 54 6"
+                                    fill="none"
+                                >
+                                    <circle
+                                        cx="19"
+                                        cy="3"
+                                        r="3"
+                                        fill="#0E1412"
+                                    />
+                                    <circle
+                                        cx="3"
+                                        cy="3"
+                                        r="3"
+                                        fill="#FD6038"
+                                    />
+                                    <circle
+                                        cx="35"
+                                        cy="3"
+                                        r="3"
+                                        fill="#0E1412"
+                                    />
+                                    <circle
+                                        cx="51"
+                                        cy="3"
+                                        r="3"
+                                        fill="#0E1412"
+                                    />
+                                </svg>
+                            </div>
+                            <div class="gallery__countdown">
+                                <div class="infor">
+                                    <h1 class="infor__number">1782</h1>
+                                    <p class="infor__title">Law Cases</p>
+                                </div>
+                                <div class="infor">
+                                    <h1 class="infor__number">10+</h1>
+                                    <p class="infor__title">Lawyer</p>
+                                </div>
+                                <div class="infor">
+                                    <h1 class="infor__number">98%</h1>
+                                    <p class="infor__title">Happy Clients</p>
+                                </div>
+                                <div class="infor">
+                                    <h1 class="infor__number">90%</h1>
+                                    <p class="infor__title">Winning case</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- End-Section-Gallery -->
+            <!-- Section-Video -->
+            <section class="video">
+                <div class="container">
+                    <div class="inner">
+                        <span class="video__subheading"> #Video </span>
+                        <h2 class="video__heading">Our History & Mission</h2>
+                        <p class="video__desc">
+                            Our Law Office provides a professional experience
+                            for all our clients, helping them navigate their
+                            legal rights.
+                        </p>
+                        <div class="video__img">
+                            <img src="../img/video-img.png" alt="" />
+                            <div class="btn-play">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="100"
+                                    height="100"
+                                    viewBox="0 0 100 100"
+                                    fill="none"
+                                >
+                                    <circle
+                                        cx="50"
+                                        cy="50"
+                                        r="50"
+                                        fill="white"
+                                    />
+                                    <path
+                                        d="M62 50L44 60.3923V39.6077L62 50Z"
+                                        fill="#0E1412"
+                                    />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- End-Section-Video -->
+            <!-- Section-team -->
+            <%- include("./partials/sectionteam.ejs") %>
+            <!-- End-Section-team -->
+            <!-- Section-awards -->
+            <%- include("./partials/sectionawards.ejs") %>
+            <!-- End-Section-awards -->
+            <!-- Section-cta -->
+            <%- include("./partials/sectioncta.ejs") %>
+            <!-- End-Section-cta -->
+            <!-- Section-footer -->
             <%- include("./partials/footer.ejs") %>
+            <!-- End-Section-footer -->
         </div>
         <script type="module" src="./main.js"></script>
     </body>

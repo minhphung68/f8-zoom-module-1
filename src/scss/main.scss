@@ -1,18 +1,28 @@
 @use "./reset";
+@use "./variables";
+@use "./mixins";
 
 // Layout
 @use "./layout/grid";
 @use "./layout/header";
 @use "./layout/footer";
+@use "./layout/sectionservices";
+@use "./layout/sectionteam";
+@use "./layout/sectionawards";
+@use "./layout/sectioncta";
+
+
 
 // Pages
-@use "./pages/home";
 @use "./pages/about";
+@use "./pages/practice";
+@use "./pages/blog";
+@use "./pages/contact";
 
 // Components
 @use "./components/buttons";
-@use "./components/forms";
-@use "./components/course-item";
+// @use "./components/forms";
+// @use "./components/course-item";
 
 // Common
 * {
@@ -48,3 +58,920 @@ button {
 a {
     color: inherit;
 }
+
+//Top-Page
+.top-page {
+    background: variables.$Yellow-Light;
+    padding-bottom: 141px;
+
+    .hero {
+        margin-top: 112px;
+    }
+
+    .hero__left-content {
+
+         .subheading {
+            width: 470px;
+            color: variables.$Dark;
+            font-family: "Roboto Slab";
+            font-size: 1.8rem;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 3rem;
+            /* 166.667% */
+            margin-bottom: 12px;
+         }
+
+         .heading {
+            width: 570px;
+            color: variables.$Dark;
+            font-family: "Roboto Slab";
+            font-size: 6rem;
+            font-style: normal;
+            font-weight: 800;
+            line-height: 7rem;
+            /* 116.667% */
+            margin-bottom: 18px;
+         }
+
+         .desc {
+            width: 470px;
+            color: variables.$Dark;
+            font-family: Manrope;
+            font-size: 1.8rem;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 3rem;
+            /* 166.667% */
+            margin-bottom: 38px;
+         }
+
+         @include mixins.screen(xl) {
+            .subheading {
+                width: 100%;
+            }
+
+            .heading {
+                width: 100%;
+            }
+
+            .desc {
+                width: 100%;
+            }
+         }
+    }
+
+    .hero__right-content {
+        position: relative;
+        width: 470px;
+        height: 476px;
+
+         &::before {
+            content: url(./img/Mask-group.png);
+            position: absolute;
+            top: 111px;
+            right: -94px;
+        }
+
+        .circle-play {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            top: -100px;
+            left: -100px;
+
+            .circle-text {
+                position: absolute;
+                width: 200px;
+                height: 200px;
+                top: 0;
+                left: 0;
+                color: variables.$Dark;
+                font-family: "Roboto Slab";
+                font-size: 1.8rem;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+            }
+
+            .play-btn {
+                position: absolute;
+                width: 100px;
+                height: 100px;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
+    }
+
+    @include mixins.screen(xl) {
+        .hero__right-content {
+            .circle-play {
+                width: 100px;
+                height: 100px;
+                top: -50px;
+                left: -50px;
+
+                .circle-text {
+                    width: 150px;
+                    height: 150px;
+                    top: -25px;
+                    left: -25px;
+                }
+            }
+        }
+    
+    }
+
+    @include mixins.screen(md) {
+        padding-bottom: 30px;
+
+        .inner {
+            .hero {
+                margin-top: 20px;
+
+                .hero__left-content {
+                    margin-bottom: 80px;
+
+                    .subheading {
+                        font-size: 1rem;
+                        margin-bottom: 10px;
+                        line-height: 1.7rem; /* 170% */
+                    }
+
+                    .heading {
+                        font-size: 3.5rem;
+                        line-height: 4.1rem; /* 117.143% */
+                        margin-bottom: 10px;
+                    }
+
+                    .desc {
+                        width: 276px;
+                        font-size: 1rem;
+                        line-height: 1.7rem; /* 170% */
+                        margin-bottom: 12px;
+                    }
+                }
+
+                .hero__right-content {
+                    width: 240px;
+                    height: 100%;
+                    
+                    &::before {
+                        content: url(./img/img-hero-mask-md.png);
+                        top: 56px;
+                        right: -26px;
+                    }
+
+                    img {
+                        width: 100%;
+                    }
+
+                    .circle-play {
+                        width: 50px;
+                        height: 50px;
+                        top:-25px;
+                        left: -25px;
+
+                        .play-btn {
+                            width: 50px;
+                            height: 50px;
+                        }
+
+                        .circle-text {
+                            width: 100px;
+                            height: 100px;
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+}
+
+
+
+//Section About Us
+.about-us {
+    background: variables.$Dark;
+    padding: 100px 0;
+
+     @include mixins.screen(md) {
+            padding: 30px 0;
+        }
+
+    &__img-left {
+        position: relative;
+
+        img {
+            width: 100%;
+        }
+
+        &::before {
+            content: url(./img/Abstract-about-us-imgleft.png);
+            position: absolute;
+            right: -57px;
+            bottom: 110px;
+        }
+
+        @include mixins.screen(md) {
+            display: none;
+        }
+    }
+
+    &__content-right {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100%;
+
+         .sub-heading {
+            color: variables.$Orange;
+            font-family: "Roboto Slab";
+            font-size: 1.8rem;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 3rem;
+            /* 166.667% */
+            margin-bottom: 6px;
+
+        @include mixins.screen(md) {
+            font-size: 1.2rem;
+            line-height: 2.1rem; /* 175% */
+            margin-bottom: 10px;
+        }
+
+        }
+
+        .heading {
+            color: variables.$White;
+            font-family: "Roboto Slab";
+            font-size: 4.2rem;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 5.2rem;
+            /* 123.81% */
+            margin-bottom: 18px;
+
+        @include mixins.screen(md) {
+            font-size: 3rem;
+            line-height: 3.6rem; /* 175% */
+            margin-bottom: 15px;
+        }
+        }
+
+        .desc {
+            color: variables.$Grey;
+            font-family: Manrope;
+            font-size: 1.8rem;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 3rem;
+            /* 166.667% */
+            margin-bottom: 28px;
+
+        @include mixins.screen(md) {
+            font-size: 1.2rem;
+            line-height: 2.1rem; /* 175% */
+            margin-bottom: 15px;
+        }
+
+        }
+
+         .Countdown {
+            display: flex;
+            gap: 55px;
+            margin-bottom: 38px;
+
+            @include mixins.screen(md) {
+                margin-bottom: 30px;
+            }
+
+            .Countdown__card {
+
+                .number {
+                    color: variables.$White;
+                    text-align: center;
+                    font-family: "Roboto Slab";
+                    font-size: 2.4rem;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: 3.4rem;
+                    /* 141.667% */
+                    margin-bottom: 4px;
+
+                @include mixins.screen(md) {
+                    font-size: 1.6rem;
+                    line-height: 2.4rem; /* 175% */
+                }
+
+                }
+
+                .content {
+                    color: variables.$Grey;
+                    font-family: Manrope;
+                    font-size: 1.8rem;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 3rem;
+                    /* 166.667% */
+
+                    @include mixins.screen(md) {
+                        font-size: 1.2rem;
+                        line-height: 2.1rem; /* 175% */
+                    }
+                }
+            }
+        }
+
+        a.button-primary {
+            width: 166px;
+        }
+    }
+}
+
+//Section Services
+
+//Section Feature
+.features {
+    padding-bottom: 150px;
+
+    &__img-left {
+
+        position: relative;
+
+        img {
+            width: 100%;
+        }
+
+        &::before {
+            content: url(./img/abstact-features-imgleft.png);
+            position: absolute;
+            top: 191px;
+            left: -49px;
+
+            @include mixins.screen(md) {
+                left: -9px;
+            }
+        }
+    }
+
+    &__content-right {
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100%;
+
+        .button-primary {
+            margin-top: 10px;
+            width: 180px;
+        }
+
+        .subheading {
+            color: variables.$Grey2;
+            font-family: "Roboto Slab";
+            font-size: 1.8rem;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 3rem;
+            /* 166.667% */
+            margin-bottom: 6px;
+        }
+
+        .heading {
+            max-width: 469px;
+            color: variables.$Dark;
+            font-family: "Roboto Slab";
+            font-size: 4.2rem;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 5.2rem;
+            /* 123.81% */
+            margin-bottom: 18px;
+        }
+
+        .desc {
+            max-width: 470px;
+            color: variables.$Grey2;
+            font-family: Manrope;
+            font-size: 1.8rem;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 3rem;
+            /* 166.667% */
+            margin-bottom: 28px;
+        }
+
+        .feature {
+            list-style-type: none;
+
+            li {
+                position: relative;
+                padding-left: 32px;
+                max-width: 470px;
+                color: variables.$Dark;
+                font-family: Manrope;
+                font-size: 1.8rem;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 3rem;
+                /* 166.667% */
+                margin-bottom: 12px;
+
+                &::before {
+                    content: "";
+                    display: inline-block;
+                    width: 6px;
+                    height: 6px;
+                    background: variables.$Dark;
+                    border-radius: 50%;
+                    position: absolute;
+                    left: 8px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                }
+            }
+        }
+    }
+
+    @include mixins.screen(md) {
+        padding-bottom: 50px;
+
+        &__content-right {
+            .subheading {
+                font-size: 1.2rem;
+                line-height: 2.1rem;
+            }
+
+            .heading {
+                font-size: 2.9rem;
+                line-height: 3.7rem;
+            }
+
+            .desc {
+                font-size: 1.2rem;
+                line-height: 2.1rem;
+                margin-bottom: 20px;
+            }
+
+            .feature {
+                li {
+                    font-size: 1.2rem;
+                    line-height: 2.1rem;
+                }
+            }
+        }
+    }
+}
+
+//Section-Testimonial
+.testimonial {
+    background: variables.$White;
+    padding: 150px 0;
+
+    .testimonial-infor {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        margin-bottom: 70px;
+
+        &__heading {
+            display: flex;
+            flex-direction: column;
+
+            .subheading {
+                color: variables.$Grey2;
+                font-family: "Roboto Slab";
+                font-size: 1.8rem;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 3rem; /* 166.667% */
+                margin-bottom: 6px;
+            }
+
+            .heading {
+                max-width: 469px;
+                color: variables.$Dark;
+                font-family: "Roboto Slab";
+                font-size: 4.2rem;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 5.2rem; /* 123.81% */
+            }
+        }
+    }
+
+    .testimonial-card {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        padding: 30px;
+        border: 1px solid variables.$Border;
+        background: variables.$White;
+
+        &:hover {
+            background: variables.$White;
+            box-shadow: 0px 20px 70px 0px rgba(14, 20, 18, 0.07);
+            border: none;
+        }
+
+        &__avatar {
+            width: 64px;
+            height: 64px;
+        }
+
+        &__desc {
+            color: variables.$Grey2;
+            font-family: Manrope;
+            font-size: 1.8rem;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 3rem; /* 166.667% */
+        }
+
+        &__sign {
+
+            .icon {
+                width: 27px;
+                height: 24px;
+                margin-bottom: 12px;
+            }
+
+            .name {
+                color: variables.$Dark;
+                font-family: Manrope;
+                font-size: 2rem;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 3rem; /* 150% */
+
+            }
+
+            .title {
+                color: variables.$Grey2;
+                font-family: Manrope;
+                font-size: 1.4rem;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 2.4rem; /* 171.429% */
+            }
+
+        }
+    }
+
+    .testimonial-dot {
+        margin-top: 55px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    @include mixins.screen(lg) {
+        .testimonial-infor {
+            flex-direction: column;
+            gap: 16px;
+            align-items: flex-start;
+            margin-bottom:40px;
+
+            .testimonial-infor__actions {
+                display: none;
+            }
+        }
+    }
+
+    @include mixins.screen(md) {
+        padding: 50px 0;
+
+        .testimonial-infor {
+            .testimonial-infor__heading {
+                .subheading {
+                    font-size: 1.2rem;
+                    line-height: 2.1rem; /* 171.429% */
+                }
+
+                .heading {
+                    font-size: 3rem;
+                    line-height: 3.7rem; /* 171.429% */
+                }
+            }
+        }
+    }
+}
+
+//Section-FAQ
+.faq {
+    padding-bottom: 120px;
+
+    &__subheading {
+        display: block;
+        color: variables.$Grey2;
+        text-align: center;
+        font-family: "Roboto Slab";
+        font-size: 1.8rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 3rem; /* 166.667% */
+        margin-bottom: 6px;
+    }
+
+    &__heading {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 570px;
+        color: variables.$Dark;
+        text-align: center;
+        font-family: "Roboto Slab";
+        font-size: 4.2rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 5.2rem; /* 123.81% */
+        margin-bottom: 18px;
+    }
+
+    &__tab { 
+        display: flex;
+        gap: 30px;
+        justify-content: center;
+        margin-bottom: 70px;
+
+        a {
+            color: var(--Dark, #0E1412);
+            font-family: Manrope;
+            font-size: 1.8rem;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 3rem; /* 166.667% */
+            text-decoration: none;
+
+            &.active {
+                color: variables.$Orange;
+                font-family: Manrope;
+                font-size: 1.8rem;
+                font-style: normal;
+                font-weight: 600;
+                line-height: 3rem; /* 166.667% */
+            }
+        }
+    }
+
+    &__card {
+        display: flex;
+        flex-direction: column;
+        padding: 30px;
+        background: variables.$White;
+        box-shadow: 0px 20px 70px 0px rgba(14, 20, 18, 0.07);
+        margin-bottom: 30px;
+
+        :is(#faqchecked,#faqchecked2,#faqchecked3):checked{
+            ~ .content {
+                display: none;
+            }
+
+            ~ .title .button-icon2 {
+                   background: variables.$Dark;
+                   i {
+                    transform: rotate(180deg);
+                   }
+            }
+        
+        }
+
+        .title {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .heading {
+                color: variables.$Dark;
+                font-family: Manrope;
+                font-size: 2.2rem;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 3,2rem; /* 145.455% */
+            }
+        }
+
+        .content {
+            color: variables.$Grey2;
+            font-family: Manrope;
+            font-size: 1.8rem;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 3rem; /* 166.667% */
+            margin-top: 18px;
+        }
+
+        &--close {
+            padding: 30px;
+            border-top: 1px solid variables.$Light-grey;
+
+            .title {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                .heading {
+                    color: variables.$Dark;
+                    font-family: Manrope;
+                    font-size: 2.2rem;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: 3,2rem; /* 145.455% */
+                }
+            }
+        }
+    }
+
+    @include mixins.screen(md) {
+
+        padding-bottom: 50px;
+
+       &__subheading {
+            font-size: 1.2rem;
+            line-height: 2.1rem;
+       }
+
+       &__heading {
+            font-size: 2.4rem;
+            line-height: 3rem;
+       }
+
+       &__tab {
+
+            margin-bottom: 40px;
+
+            a {
+                font-size: 1rem;
+                line-height: 1.7rem;
+
+                &.active {
+                    font-size: 1rem;
+                    line-height: 1.7rem;
+                }
+            }
+       }
+
+       &__card {
+            margin-bottom: 15px;
+            padding: 15px;
+
+            .title {
+                .heading {
+                    font-size: 1rem;
+                    line-height: 1.4rem;
+                }
+            }
+
+            .content {
+                margin-top: 8px;
+                font-size: 1rem;
+                line-height: 1.4rem;
+            }
+       }
+
+    }
+}
+
+//Section-Blog
+.blog {
+    margin-bottom: 150px;
+
+    &__mb70 {
+        margin-bottom: 70px;
+    }
+
+    &__subheading {
+        color: variables.$Grey2;
+        text-align: center;
+        font-family: "Roboto Slab";
+        font-size: 1.8rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 3rem; /* 166.667% */
+        margin-bottom: 6px;
+    }
+
+    &__heading {
+        max-width: 470px;
+        color: variables.$Dark;
+        font-family: "Roboto Slab";
+        font-size: 4.2rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 5.2rem; /* 123.81% */
+        margin-bottom: 18px;
+    }
+
+    &__desc {
+        max-width: 470px;
+        color: variables.$Grey2;
+        font-family: Manrope;
+        font-size: 1.8rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 3rem; /* 166.667% */
+    }
+
+    &__card {
+        .card-blog-img {
+            margin-bottom: 20px;
+
+            img {
+                width: 100%;
+            }
+        }
+
+        .card-blog-user-infor {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 20px;
+
+            .infor {
+                .name {
+                    color: variables.$Dark;
+                    font-family: Manrope;
+                    font-size: 1.8rem;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: 3rem; /* 166.667% */
+                }
+                .title {
+                    color: variables.$Grey2;
+                    font-family: Manrope;
+                    font-size: 1.6rem;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 2.8rem; /* 175% */
+                }
+            }
+        }
+
+        .card-blog-desc {
+            max-width: 370px;
+            color: variables.$Dark;
+            font-family: Manrope;
+            font-size: 2.2rem;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 3.2rem; /* 145.455% */
+            margin-bottom: 12px;
+        }
+    }
+
+    @include mixins.screen(lg) {
+        .blog__heading {
+            width: 100%;
+        }
+
+        .blog__desc {
+            width: 100%;
+        }
+    }
+
+    @include mixins.screen(md) {
+        margin-bottom: 50px;
+
+        &__subheading {
+            font-size: 1rem;
+            line-height: 1.7rem;
+        }
+
+        &__heading {
+            font-size: 3rem;
+            line-height: 3.7rem;
+            margin-bottom: 15px;
+        }
+
+        &__desc {
+            font-size: 1.2rem;
+            line-height: 2.1rem;
+        }
+
+        &__mb70 {
+            margin-bottom: 40px;
+        }
+
+        &__card {
+
+        .card-blog-desc {
+            
+            font-size: 1.9rem;
+            line-height: 2.8rem; /* 145.455% */
+           
+        }
+    }
+
+        
+    }
+}
+
+
+
+
+
+

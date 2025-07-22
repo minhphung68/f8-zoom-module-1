@@ -1,0 +1,129 @@
+@use "/scss/mixins";
+@use "/scss/variables";
+
+// Section Teams
+.team {
+    background: variables.$Dark;
+    padding: 100px 0;
+
+    .subheading {
+        display: block;
+        color: variables.$Orange;
+        text-align: center;
+        font-family: "Roboto Slab";
+        font-size: 1.8rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 3rem;
+        /* 166.667% */
+        margin-bottom: 6px;
+    }
+
+    .heading {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 469px;
+        color: variables.$White;
+        text-align: center;
+        font-family: "Roboto Slab";
+        font-size: 4.2rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 5.2rem;
+        /* 123.81% */
+        margin-bottom: 18px;
+    }
+
+    .desc {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 470px;
+        color: variables.$Grey;
+        text-align: center;
+        font-family: Manrope;
+        font-size: 1.8rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 3rem;
+        /* 166.667% */
+        margin-bottom: 70px;
+    }
+
+    .team-card {
+        display: flex;
+        justify-items: center;
+        align-items: center;
+        flex-direction: column;
+
+        &:hover {
+            .button-primary {
+                display: block;
+            }
+        }
+
+        &__img {
+            position: relative;
+
+            img {
+                width: 100%;
+            }
+
+            .button-primary {
+                position: absolute;
+                bottom: 30px;
+                left: 100px;
+                right: 100px;
+                margin-left: 0;
+                margin-right: 0;
+                width: auto;
+                display: none;
+                white-space: nowrap;
+            }
+        }
+
+        &__infor {
+            margin-top: 18px;
+            .name {
+                color: variables.$White;
+                text-align: center;
+                font-family: Manrope;
+                font-size: 2.2rem;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 3.2rem; /* 145.455% */
+            }
+
+            .title {
+                color: variables.$Grey;
+                text-align: center;
+                font-family: Manrope;
+                font-size: 1.6rem;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 2.8rem; /* 175% */
+            }
+        }
+    }
+
+    @include mixins.screen(md) {
+        padding: 50px 0;
+
+        .subheading {
+            font-size: 1.2rem;
+            line-height: 2.1rem;
+        }
+
+        .heading {
+            font-size: 3rem;
+            line-height: 3.7rem;
+        }
+
+        .desc {
+            font-size: 1.2rem;
+            line-height: 2.1rem;
+            margin-bottom: 40px;
+        }
+
+
+    }
+}
